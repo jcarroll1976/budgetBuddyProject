@@ -4,9 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=This is an html filr, initial-scale=1.0">
-    <title>Document</title>
+    <title>Budget Buddy</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    This is an html file.
+    <header>
+        <h1>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <a href="#home" class="active">Budget Buddy</a>
+          <!-- Navigation links -->
+          <div id="myLinks">
+            <a href="#news">Homepage</a>
+            <a href="#contact">About the Creators</a>
+          </div>
+          <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+            </h1>
+     <!--Menu to disappear onclick--> 
+    </header>
+
+    <h1> Hey there, thanks for using the Budget Buddy! </h1>
+    <h2>How does Budget Buddy work?</h2>
+    <p> To use the Budget Buddy, you'll start by entering your budget for your desired timeframe (you can do a day, week, month, etc!). Then, over the period of the time for which you've provided your budget amount, you'll enter how much money you spend in each category! Along the way, Budget Buddy can tell you how much of your budget remains, how much you've spent, and how much you've spent per category!</p>    
+    </div>
+    <div id="enterName">
+        <form id="nameForm">
+
+            <label for="name">
+                Before we get started, what should I call you?
+            </label>
+            <input type="text" id="name" placeholder="Enter your name!">
+
+            <button id="submit">Let's go!</button> <!--Probably want an event.preventDefault(); here-->
+        </form>
+        <div id="printName"> Hi, name!</div>
+    </div>
+    
+    <!--This is where the actual program will begin-->
+    <section>
+        <h1>Enter your starting budget amount here:</h1>
+        <p id="monthlyBudget"></p>
+        <form>
+            <input type="number" id="incomeInput" placeholder="Budget amount">
+            <button id="updateBudget">Update Budget</button><!-- Probably want event.preventDefault here too, just on all the submits I would think?-->
+        </form>
+    </section>
+
+    <section id="categorySection">
+        <h1>Categories</h1>
+
+        <div id="categories">
+            <table>
+                <tr>
+                    <td>Entertainment</td>
+                    <td><input type="number" id="entertainment"> placeholder="Add entertainment expense</td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+    
+
+     // Categories
+     // Each category has a field to enter expense costs which will affect remaining budget and total what has been spent thus far
+     // "Add Expenses" button under categories executes the affect of the costs (to remaining and spent total)
+
+     // Remaining amount:
+     // Total spent:
+     // Spend per category:
+     // Add amounts per category and display as such
+
+     //How does BudgetBuddy work?
+     // Briefly describe the mechanics of the program -->
 </body>
+
+<script src="script.js"></script>
 </html>
