@@ -63,25 +63,55 @@
             <table>
                 <tr>
                     <td>Entertainment</td>
-                    <td><input type="number" id="entertainment"> placeholder="Add entertainment expense</td>
+                    <td><input type="number" id="entertainment" placeholder="Enter entertainment expenses"></td>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td><input type="number" id="food" placeHolder="Enter food expenses"></td>
+                </tr>
+                <tr>
+                    <td>Clothing</td>
+                    <td><input type="number" id="clothing" placeholder="Enter clothing expenses"></td>
+                </tr>
+                <tr>
+                    <td>Bills</td>
+                    <td><input type="number" id="bills" placeholder="Enter bill amounts here"></td>
                 </tr>
             </table>
+            <button id="addExpenses">Add expenses!</button>
         </div>
 
-    </section>
-    
+    </section id="totalsSection">
+    <table id="totalsTable">
+        <tr>
+            <td>Remaining Amount:</td>
+            <td id="remainingAmount"></td>
+        </tr>
+        <tr>
+            <td>Total Spent:</td>
+            <td id="totalSpent"></td>
+        </tr>
+            <td>Categories</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Entertainment:</td>
+            <td id="entertainmentTotal"></td>
+        </tr>
+        <tr>
+            <td>Food:</td>
+            <td id="foodTotal"></td>
+        </tr>
+        <tr>
+            <td>Clothing:</td>
+            <td id="clothingTotal"></td>
+        </tr>
+        <tr>
+            <td>Bills:</td>
+            <td id="billsTotal"></td>
+        </tr>
+    </table>
 
-     // Categories
-     // Each category has a field to enter expense costs which will affect remaining budget and total what has been spent thus far
-     // "Add Expenses" button under categories executes the affect of the costs (to remaining and spent total)
-
-     // Remaining amount:
-     // Total spent:
-     // Spend per category:
-     // Add amounts per category and display as such
-
-     //How does BudgetBuddy work?
-     // Briefly describe the mechanics of the program -->
 </body>
 
 <script src="script.js"></script>
