@@ -1,13 +1,13 @@
-body{
-  background-color: white;
-}
-  /*background-color: rgb(227, 242, 236);
-}
+ body{
+  /*background-color: white;
+ }*/
+  background-color: rgb(227, 242, 236);
+ }
 
 
-/*Everything down here is for the hamburger menu! :) */
-/* Style the navigation menu */
-.topnav {
+ /*Everything down here is for the hamburger menu! :) */
+ /* Style the navigation menu */
+ .topnav {
     overflow: hidden;
     background-color: #333;
     position: relative;
@@ -41,7 +41,8 @@ body{
     background-color: #ddd;
     color: black;
   }
-  
+
+
   /* Style the active link (or home/logo) */
   .active {
     background-color: #1fb65e;
@@ -49,10 +50,10 @@ body{
   }
 
   /* Expenses button */
+
+
   button#addExpenses {
     color: rgba(211, 18, 18, 0.767);
-    
-
   }
 
   button#updateBudget {
@@ -67,11 +68,49 @@ body{
     text-align:justify;
   }
 
-  section {
-    
+  section, #nameForm, div#printName {
+    text-align: center;
   }
 
+  div#printName {
+    /*font-style: italic; */
+    font-weight: 900;
+    color: green;
+    font-size: larger;
 
+  }
+
+  p#monthlyBudget {
+    font-weight: 900;
+    color: green;  
+    text-align: center; 
+    font-size: xx-large;
+  }
+    
+
+
+@media screen and ( min-width: 800px) {
+   tbody {
+    text-align: center;
+  }
+  
+  
+
+
+}
+  
+      
+  
+    
+  
+    
+    
+      
+      
+    
+
+    
+  
   
 
     
