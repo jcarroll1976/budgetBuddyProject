@@ -31,3 +31,34 @@ function myFunction() {
     incomeInput.style.display = "none";
     budgetButton.style.display = "none";
   })
+
+
+
+
+
+
+
+
+
+
+  /*this is for the nav links*/
+  function showBudgetBuddy() {
+    const buddy = document.querySelector("#budgetBuddy");
+    buddy.style.display = "block";
+
+    const creators = document.querySelector("#aboutCreators");
+    creators.style.display="none";
+
+    const x = document.getElementById("myLinks");
+    x.style.display = "none";
+  };
+  function showAboutCreators() {
+    const creators = document.querySelector("#aboutCreators");
+    creators.style.display = "block";
+
+    const buddy = document.querySelector("#budgetBuddy");
+    buddy.style.display = "none";
+
+    const x = document.getElementById("myLinks");
+    x.style.display = "none";
+  };
