@@ -1,14 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
+body{
+  background-color: white;
+}
+  /*background-color: rgb(227, 242, 236);
+}
 
 
 /*Everything down here is for the hamburger menu! :) */
@@ -50,6 +44,39 @@
   
   /* Style the active link (or home/logo) */
   .active {
-    background-color: #04AA6D;
+    background-color: #1fb65e;
     color: white;
   }
+
+  /* Expenses button */
+  button#addExpenses {
+    color: rgba(211, 18, 18, 0.767);
+    
+
+  }
+
+  button#updateBudget {
+    color: green;
+  }
+
+  h1,h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align:justify;
+  }
+
+  section {
+    
+  }
+
+
+  
+
+    
+
+  
+  
+    
+  
