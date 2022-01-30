@@ -9,7 +9,7 @@
  /* Style the navigation menu */
  .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #1fb65e;
     position: relative;
   }
   
@@ -45,6 +45,8 @@
 
   /* Style the active link (or home/logo) */
   .active {
+    width:200px;
+    height: auto;
     background-color: #1fb65e;
     color: white;
   }
@@ -104,6 +106,10 @@
     text-align: center;
   }
   
+  .active {
+    width: 300px;
+    height: auto;
+  }
   
 
 
