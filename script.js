@@ -53,9 +53,12 @@ function myFunction() {
     budgetHeader.innerText = "Starting Budget:";
     incomeInput.style.display = "none";
     budgetButton.style.display = "none";
+    
   })
 
-
+  function remainingBudget() {
+    return (incomeInput.value * 1) - expenseTotal;
+  }
 
 
 
@@ -78,11 +81,12 @@ function myFunction() {
     foodExpense += (document.getElementById("food").value * 1);
     clothingExpense += (document.getElementById("clothing").value * 1);
     billsExpense += (document.getElementById("bills").value * 1);
-    expenseTotal = entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+    expenseTotal += entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+    remainingBudget();
+    document.getElementById("remainingAmount").innerText = "$" + remainingBudget() + ".00";
     document.getElementById("totalSpent").innerText = "$" + expenseTotal + ".00";
     document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense + ".00";
     document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
     document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
     document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
-    document.getElementById("entertainment").value.style.display = "none";
   })
