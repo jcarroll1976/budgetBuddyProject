@@ -8,6 +8,28 @@ function myFunction() {
     }
   }
 
+  /*this is for the nav links*/
+  function showBudgetBuddy() {
+    const buddy = document.querySelector("#budgetBuddy");
+    buddy.style.display = "block";
+
+    const creators = document.querySelector("#aboutCreators");
+    creators.style.display="none";
+
+    const x = document.getElementById("myLinks");
+    x.style.display = "none";
+  };
+  function showAboutCreators() {
+    const creators = document.querySelector("#aboutCreators");
+    creators.style.display = "block";
+
+    const buddy = document.querySelector("#budgetBuddy");
+    buddy.style.display = "none";
+
+    const x = document.getElementById("myLinks");
+    x.style.display = "none";
+  };
+  
   const printName = document.getElementById("printName");
   const submitName = document.getElementById("name");
   const submitButton = document.getElementById("submit");
@@ -16,6 +38,7 @@ function myFunction() {
   submitButton.addEventListener("click", (event) => {
     event.preventDefault();
     printName.innerText = "Hi " + submitName.value + "!";
+    printName.style.display ="block";
     nameForm.style.display = "none";
   })
 
@@ -41,24 +64,25 @@ function myFunction() {
 
 
 
-  /*this is for the nav links*/
-  function showBudgetBuddy() {
-    const buddy = document.querySelector("#budgetBuddy");
-    buddy.style.display = "block";
+  
+  const addExpensesButton = document.getElementById("addExpenses");
+  let entertainmentExpense = 0;
+  let foodExpense = 0;
+  let clothingExpense = 0;
+  let billsExpense = 0;
+  let expenseTotal = 0;
 
-    const creators = document.querySelector("#aboutCreators");
-    creators.style.display="none";
-
-    const x = document.getElementById("myLinks");
-    x.style.display = "none";
-  };
-  function showAboutCreators() {
-    const creators = document.querySelector("#aboutCreators");
-    creators.style.display = "block";
-
-    const buddy = document.querySelector("#budgetBuddy");
-    buddy.style.display = "none";
-
-    const x = document.getElementById("myLinks");
-    x.style.display = "none";
-  };
+  addExpensesButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    entertainmentExpense += (document.getElementById("entertainment").value * 1);
+    foodExpense += (document.getElementById("food").value * 1);
+    clothingExpense += (document.getElementById("clothing").value * 1);
+    billsExpense += (document.getElementById("bills").value * 1);
+    expenseTotal = entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+    document.getElementById("totalSpent").innerText = "$" + expenseTotal + ".00";
+    document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense + ".00";
+    document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
+    document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
+    document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
+    document.getElementById("entertainment").value.style.display = "none";
+  })
