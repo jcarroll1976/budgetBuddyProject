@@ -66,7 +66,6 @@ function myFunction() {
 
 
 
-
   
   const addExpensesButton = document.getElementById("addExpenses");
   let entertainmentExpense = 0;
@@ -81,12 +80,29 @@ function myFunction() {
     foodExpense += (document.getElementById("food").value * 1);
     clothingExpense += (document.getElementById("clothing").value * 1);
     billsExpense += (document.getElementById("bills").value * 1);
-    expenseTotal += entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+    expenseTotal = entertainmentExpense + foodExpense + clothingExpense + billsExpense;
     remainingBudget();
+    if (remainingBudget() >= 0) {
     document.getElementById("remainingAmount").innerText = "$" + remainingBudget() + ".00";
     document.getElementById("totalSpent").innerText = "$" + expenseTotal + ".00";
     document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense + ".00";
     document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
     document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
     document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
+    document.getElementById("expenseForm").reset();
+    } else {
+      entertainmentExpense -= (document.getElementById("entertainment").value * 1);
+      foodExpense -= (document.getElementById("food").value * 1);
+      clothingExpense -= (document.getElementById("clothing").value * 1);
+      billsExpense -= (document.getElementById("bills").value * 1);
+      expenseTotal = entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+      document.getElementById("remainingAmount").innerText = "$" + remainingBudget() + ".00";
+      document.getElementById("totalSpent").innerText = "$" + expenseTotal + ".00";
+      document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense + ".00";
+      document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
+      document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
+      document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
+      document.getElementById("expenseForm").reset();
+      document.getElementById("insufficientFunds").innerText = "You don't have enough funds to add expense(s).";
+    }
   })
