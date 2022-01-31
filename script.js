@@ -30,6 +30,8 @@ function myFunction() {
     x.style.display = "none";
   };
   
+// Actual form stuff
+
   const printName = document.getElementById("printName");
   const submitName = document.getElementById("name");
   const submitButton = document.getElementById("submit");
@@ -89,4 +91,5 @@ function myFunction() {
     document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
     document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
     document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
-  })
+    })
+
