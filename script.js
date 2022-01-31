@@ -42,7 +42,7 @@ function myFunction() {
     printName.innerText = "Hi " + submitName.value + "!";
     printName.style.display ="block";
     nameForm.style.display = "none";
-  })
+  });
 
   const incomeInput = document.getElementById("incomeInput");
   const budgetButton = document.getElementById("updateBudget");
@@ -56,17 +56,11 @@ function myFunction() {
     incomeInput.style.display = "none";
     budgetButton.style.display = "none";
     
-  })
+  });
 
   function remainingBudget() {
     return (incomeInput.value * 1) - expenseTotal;
   }
-
-
-
-
-
-
 
 
   
@@ -83,13 +77,16 @@ function myFunction() {
     foodExpense += (document.getElementById("food").value * 1);
     clothingExpense += (document.getElementById("clothing").value * 1);
     billsExpense += (document.getElementById("bills").value * 1);
-    expenseTotal += entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+    expenseTotal = entertainmentExpense + foodExpense + clothingExpense + billsExpense;
     remainingBudget();
+    if (remainingBudget() >= 0) {
     document.getElementById("remainingAmount").innerText = "$" + remainingBudget() + ".00";
     document.getElementById("totalSpent").innerText = "$" + expenseTotal + ".00";
     document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense + ".00";
     document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
     document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
     document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
+    }
     })
+
 
