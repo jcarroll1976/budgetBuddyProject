@@ -139,6 +139,7 @@
     color: green;  
     text-align: center; 
     font-size: xx-large;
+    margin: 0px;
   }
 
   td {
@@ -162,7 +163,7 @@
   form#expenseForm {
     text-align:start;
     margin: auto;
-    padding: 50px;
+    padding: 25px;
     width: 100%;
     
   }
@@ -170,19 +171,40 @@
   
 #budgetBuddy {
   display: block;
+  align-items: center;
+  justify-content: center;
 }
 
   #aboutCreators {
     display: none;
   }
-  
-    
 
+  .forFlex {
+    display:flex;
+    flex-direction: column;
+  }
+
+  #initialForms {
+    max-width: 500px;
+  }
+
+  .categoryInputFields {
+    max-width: 70%;
+  }
+    
+#categoryHeader {
+  margin-bottom: 0px;
+}
+
+.hiThere {
+  display:flex;
+}
 
 @media screen and ( min-width: 780px) {
-   tbody {
+  tbody {
     text-align: center;
   }
+
   body {
     position: relative;
   }
@@ -215,17 +237,42 @@
   }
 
  
-    
 
-  
- 
+.firstHalf {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
-  
+.secondHalf {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
+.thirdPart {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.container {
+  display:flex;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+#budgetBuddy {
+  max-width: 60%;
+}
+
+.hiThere {
+  justify-content: center;
+}
 
 }
+
   
-      
   
     
   

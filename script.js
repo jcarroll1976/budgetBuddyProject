@@ -10,7 +10,7 @@ function myFunction() {
 
   /*this is for the nav links*/
   function showBudgetBuddy() {
-    const buddy = document.querySelector("#budgetBuddy");
+    const buddy = document.querySelector("#topContainer");
     buddy.style.display = "block";
 
     const creators = document.querySelector("#aboutCreators");
@@ -23,7 +23,7 @@ function myFunction() {
     const creators = document.querySelector("#aboutCreators");
     creators.style.display = "block";
 
-    const buddy = document.querySelector("#budgetBuddy");
+    const buddy = document.querySelector("#topContainer");
     buddy.style.display = "none";
 
     const x = document.getElementById("myLinks");

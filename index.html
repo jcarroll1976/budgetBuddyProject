@@ -28,12 +28,20 @@
             </h1>
      <!--Menu to disappear onclick--> 
     </header>
-    <section id="budgetBuddy">
+    
+    <section id="topContainer">
+    <div class="hiThere">
 
+    <section id="budgetBuddy">
+        
     <h1> Hey there, thanks for using the Budget Buddy! </h1>
     <h2>How does Budget Buddy work?</h2>
-    <p> To use the Budget Buddy, you'll start by entering your budget for your desired timeframe (you can do a day, week, month, etc!). Then, over the period of the time for which you've provided your budget amount, you'll enter how much money you spend in each category! Along the way, Budget Buddy can tell you how much of your budget remains, how much you've spent, and how much you've spent per category!</p>    
+    <p id="greetParagraph"> To use the Budget Buddy, you'll start by entering your budget for your desired timeframe (you can do a day, week, month, etc!). Then, over the period of the time for which you've provided your budget amount, you'll enter how much money you spend in each category! Along the way, Budget Buddy can tell you how much of your budget remains, how much you've spent, and how much you've spent per category!</p>    
     </div>
+
+    <section class="container">
+     <!-- This part contains the name field and starting budget field-->   
+    <section class="firstHalf">
     <div id="enterName" class="initialForms">
         <form id="nameForm">
 
@@ -42,7 +50,7 @@
             </label>
             <input type="text" id="name" placeholder="Enter your name!">
 
-            <button id="submit">Let's go!</button> <!--Probably want an event.preventDefault(); here-->
+            <button id="submit">Let's go!</button>
         </form>
         <div id="printName"> Hi, name!</div>
     </div>
@@ -53,34 +61,42 @@
         <p id="monthlyBudget"></p>
         <form>
             <input type="number" id="incomeInput" placeholder="Budget amount">
-            <button id="updateBudget">Update Budget</button><!-- Probably want event.preventDefault here too, just on all the submits I would think?-->
+            <button id="updateBudget">Update Budget</button>
         </form>
     </section>
+    </section>
 
+    <!--This section holds the category INPUT FIELDS-->
+    <section class="secondHalf">
     <section id="categorySection">
-        <h1>Categories</h1>
+        <h1 id="categoryHeader">Categories</h1>
 
         <div id="categories">
             <form id = "expenseForm">
                     <label for="entertainment">Entertainment</label>
-                    <input type="text" id="entertainment" placeholder="Enter entertainment expenses">
+                    <input type="text" class="categoryInputFields" id="entertainment" placeholder="Enter entertainment expenses">
 
                     <label for="food">Food</label>
-                    <input type="text" id="food" placeHolder="Enter food expenses">
+                    <input type="text" class="categoryInputFields" id="food" placeHolder="Enter food expenses">
                 
                     <label for="clothing">Clothing</label>
-                    <input type="text" id="clothing" placeholder="Enter clothing expenses">
+                    <input type="text" class="categoryInputFields" id="clothing" placeholder="Enter clothing expenses">
 
                     <label for="bills">Bills</label>
-                    <input type="text" id="bills" placeholder="Enter bill amounts here">
+                    <input type="text" class="categoryInputFields" id="bills" placeholder="Enter bill amounts here">
 
             <button type="submit" id="addExpenses">Add expenses!</button>
 
         </form>
+        </div>
+        </section>
         <p id = "insufficientFunds"></p>
         </div>
+    </div>
+    </section>
 
-    </section id="totalsSection">
+<!--Totals Table-->
+<section class="thirdPart">
     <table id="totalsTable">
         <tr>
             <td>Remaining Amount:</td>
@@ -111,7 +127,10 @@
         </tr>
     </table>
 </section>
-
+</section>
+</section>
+</section>
+</section>
     <section id="aboutCreators">
         <!--Put a little paragraph about yourself here! :) -->
         <h1>About the creators of Budget Buddy</h1>
