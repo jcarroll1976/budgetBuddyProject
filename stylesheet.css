@@ -77,6 +77,8 @@
 
   button#updateBudget {
     color: green;
+    align-items:center;
+    width: 90px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
@@ -87,6 +89,7 @@
 
   h2 {
     font-weight: 400;
+  
   }
 
   p {
@@ -104,12 +107,21 @@
     text-align:start;
   }
 
-
-
-   #nameForm, div#printName  {
+  #nameForm, #name, section.initialForms, #incomeInput, #printName, #expenseFrom, #addExpenses {
     text-align: center;
-
+    margin: auto;
+    justify-content: center;
+    
+    
   }
+  
+    
+
+  form {
+    display:block;
+  }
+
+
 
   div#printName {
     /*font-style: italic; */
@@ -166,9 +178,12 @@
     
 
 
-@media screen and ( min-width: 800px) {
+@media screen and ( min-width: 780px) {
    tbody {
     text-align: center;
+  }
+  body {
+    position: relative;
   }
   
   .active {
@@ -191,6 +206,14 @@
     border-width: 50px;
   }
 
+  #nameForm, .initialForms {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+  }
+
+  
+ 
 
   
 
