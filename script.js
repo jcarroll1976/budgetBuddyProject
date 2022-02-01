@@ -107,6 +107,7 @@ function myFunction() {
       document.getElementById("billsTotal").innerText = "$" + billsExpense.toFixed(2);
       document.getElementById("expenseForm").reset();
       document.getElementById("insufficientFunds").innerText = "You don't have enough funds to add expense(s).";
+      document.getElementById("insufficientFunds").style.color = "red";
      }
   })
 
