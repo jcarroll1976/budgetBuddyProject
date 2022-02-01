@@ -30,6 +30,8 @@ function myFunction() {
     x.style.display = "none";
   };
   
+// Actual form stuff
+
   const printName = document.getElementById("printName");
   const submitName = document.getElementById("name");
   const submitButton = document.getElementById("submit");
@@ -40,7 +42,7 @@ function myFunction() {
     printName.innerText = "Hi " + submitName.value + "!";
     printName.style.display ="block";
     nameForm.style.display = "none";
-  })
+  });
 
   const incomeInput = document.getElementById("incomeInput");
   const budgetButton = document.getElementById("updateBudget");
@@ -54,16 +56,11 @@ function myFunction() {
     incomeInput.style.display = "none";
     budgetButton.style.display = "none";
     
-  })
+  });
 
   function remainingBudget() {
     return Number(incomeInput.value) - expenseTotal;
   }
-
-
-
-
-
 
 
   
@@ -88,6 +85,7 @@ function myFunction() {
     console.log(expenseTotal);
     remainingBudget();
     if (remainingBudget() >= 0) {
+
     document.getElementById("remainingAmount").innerText = "$" + remainingBudget().toFixed(2);
     document.getElementById("totalSpent").innerText = "$" + expenseTotal.toFixed(2);
     document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense.toFixed(2);
@@ -109,6 +107,7 @@ function myFunction() {
       document.getElementById("billsTotal").innerText = "$" + billsExpense.toFixed(2);
       document.getElementById("expenseForm").reset();
       document.getElementById("insufficientFunds").innerText = "You don't have enough funds to add expense(s).";
-      
-    }
+     }
   })
+
+
