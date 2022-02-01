@@ -59,7 +59,7 @@ function myFunction() {
   });
 
   function remainingBudget() {
-    return (incomeInput.value * 1) - expenseTotal;
+    return Number(incomeInput.value) - expenseTotal;
   }
 
 
@@ -73,20 +73,41 @@ function myFunction() {
 
   addExpensesButton.addEventListener("click", (event) => {
     event.preventDefault();
-    entertainmentExpense += (document.getElementById("entertainment").value * 1);
-    foodExpense += (document.getElementById("food").value * 1);
-    clothingExpense += (document.getElementById("clothing").value * 1);
-    billsExpense += (document.getElementById("bills").value * 1);
-    expenseTotal = entertainmentExpense + foodExpense + clothingExpense + billsExpense;
+    entertainmentExpense += Number(document.getElementById("entertainment").value);
+    console.log(entertainmentExpense);
+    foodExpense += Number(document.getElementById("food").value);
+    console.log(foodExpense);
+    clothingExpense += Number(document.getElementById("clothing").value);
+    console.log(clothingExpense);
+    billsExpense += Number(document.getElementById("bills").value);
+    console.log(billsExpense);
+    expenseTotal = Number(entertainmentExpense + foodExpense + clothingExpense + billsExpense);
+    console.log(expenseTotal);
     remainingBudget();
     if (remainingBudget() >= 0) {
-    document.getElementById("remainingAmount").innerText = "$" + remainingBudget() + ".00";
-    document.getElementById("totalSpent").innerText = "$" + expenseTotal + ".00";
-    document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense + ".00";
-    document.getElementById("foodTotal").innerText = "$" + foodExpense + ".00";
-    document.getElementById("clothingTotal").innerText = "$" + clothingExpense + ".00";
-    document.getElementById("billsTotal").innerText = "$" + billsExpense + ".00";
-    }
-    })
+
+    document.getElementById("remainingAmount").innerText = "$" + remainingBudget().toFixed(2);
+    document.getElementById("totalSpent").innerText = "$" + expenseTotal.toFixed(2);
+    document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense.toFixed(2);
+    document.getElementById("foodTotal").innerText = "$" + foodExpense.toFixed(2);
+    document.getElementById("clothingTotal").innerText = "$" + clothingExpense.toFixed(2);
+    document.getElementById("billsTotal").innerText = "$" + billsExpense.toFixed(2);
+    document.getElementById("expenseForm").reset();
+    } else {
+      entertainmentExpense -= Number(document.getElementById("entertainment").value);
+      foodExpense -= Number(document.getElementById("food").value);
+      clothingExpense -= Number(document.getElementById("clothing").value);
+      billsExpense -= Number(document.getElementById("bills").value);
+      expenseTotal = Number(entertainmentExpense + foodExpense + clothingExpense + billsExpense);
+      document.getElementById("remainingAmount").innerText = "$" + remainingBudget().toFixed(2);
+      document.getElementById("totalSpent").innerText = "$" + expenseTotal.toFixed(2);
+      document.getElementById("entertainmentTotal").innerText = "$" + entertainmentExpense.toFixed(2);
+      document.getElementById("foodTotal").innerText = "$" + foodExpense.toFixed(2);
+      document.getElementById("clothingTotal").innerText = "$" + clothingExpense.toFixed(2);
+      document.getElementById("billsTotal").innerText = "$" + billsExpense.toFixed(2);
+      document.getElementById("expenseForm").reset();
+      document.getElementById("insufficientFunds").innerText = "You don't have enough funds to add expense(s).";
+     }
+  })
 
 
