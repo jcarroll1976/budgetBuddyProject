@@ -235,6 +235,9 @@
     justify-content: center;
     width:300px;
   }
+  #entertainment, #food, #clothing, #bills {
+    width: 45%;
+  }
 
  
 
