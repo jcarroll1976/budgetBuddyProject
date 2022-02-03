@@ -61,10 +61,7 @@ function myFunction() {
   function remainingBudget() {
     return Number(incomeInput.value) - expenseTotal;
   }
-const myTimeOut = setTimeout(messageTimeout, 2000);
-function messageTimeout() {
-  insufficientFundsMessage.classList.remove("showMessage");
-}
+
   
   const addExpensesButton = document.getElementById("addExpenses");
   const entertainment = document.getElementById("entertainment");
@@ -121,28 +118,10 @@ function messageTimeout() {
       insufficientFundsMessage.classList.add("showMessage");
       setTimeout(() => {insufficientFundsMessage.classList.remove("showMessage")}, 5000);
     }
-    //addExpensesButton.addEventListener("click", (event) => {
-      //event.preventDefault();
-      //remainingBudget();
-    // if ((Number(remainingBudget())) >= 0) {
-        //insufficientFundsMessage.classList.remove("showMessage");
-      // } else {
-       // insufficientFundsMessage.classList.add("showMessage");
-       //}
-     // })
-    
+   
     })   
   
 
 
 
-   /* addExpensesButton.addEventListener("click", (event) => {
-      event.preventDefault();
-      remainingBudget();
-      console.log(Number(remainingBudget()));
-     if (remainingBudget() >= 0) {
-        insufficientFundsMessage.classList.remove("showMessage");
-       } else {
-        insufficientFundsMessage.classList.add("showMessage");
-       }
-      })*/
+  
