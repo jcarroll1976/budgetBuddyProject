@@ -61,7 +61,10 @@ function myFunction() {
   function remainingBudget() {
     return Number(incomeInput.value) - expenseTotal;
   }
-
+const myTimeOut = setTimeout(messageTimeout, 2000);
+function messageTimeout() {
+  insufficientFundsMessage.classList.remove("showMessage");
+}
   
   const addExpensesButton = document.getElementById("addExpenses");
   const entertainment = document.getElementById("entertainment");
@@ -80,7 +83,10 @@ function myFunction() {
   let foodExpense = 0;
   let clothingExpense = 0;
   let billsExpense = 0;
-  let expenseTotal = 0; 
+  let expenseTotal = 0;
+  let newExpense = 0;
+  let addedExpenseTotal = expenseTotal + expenseTotal;
+  
 
   addExpensesButton.addEventListener("click", (event) => {
     event.preventDefault();
@@ -100,10 +106,10 @@ function myFunction() {
       billsTotal.innerText = "$" + billsExpense.toFixed(2);
       expenseForm.reset();
     } else {
-      entertainmentExpense -= Number(document.getElementById("entertainment").value);
-      foodExpense -= Number(document.getElementById("food").value);
-      clothingExpense -= Number(document.getElementById("clothing").value);
-      billsExpense -= Number(document.getElementById("bills").value);
+      entertainmentExpense -= Number(entertainment.value);
+      foodExpense -= Number(food.value);
+      clothingExpense -= Number(clothing.value);
+      billsExpense -= Number(bills.value);
       expenseTotal = Number(entertainmentExpense + foodExpense + clothingExpense + billsExpense);
       remainingAmount.innerText = "$" + remainingBudget().toFixed(2);
       totalSpent.innerText = "$" + expenseTotal.toFixed(2);
@@ -112,9 +118,31 @@ function myFunction() {
       clothingTotal.innerText = "$" + clothingExpense.toFixed(2);
       billsTotal.innerText = "$" + billsExpense.toFixed(2);
       expenseForm.reset();
-      insufficientFundsMessage.innerText = "You don't have enough funds to add expense(s).";
-      insufficientFundsMessage.style.color = "red";
-     }
-  })
+      insufficientFundsMessage.classList.add("showMessage");
+      setTimeout(() => {insufficientFundsMessage.classList.remove("showMessage")}, 5000);
+    }
+    //addExpensesButton.addEventListener("click", (event) => {
+      //event.preventDefault();
+      //remainingBudget();
+    // if ((Number(remainingBudget())) >= 0) {
+        //insufficientFundsMessage.classList.remove("showMessage");
+      // } else {
+       // insufficientFundsMessage.classList.add("showMessage");
+       //}
+     // })
+    
+    })   
+  
 
 
+
+   /* addExpensesButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      remainingBudget();
+      console.log(Number(remainingBudget()));
+     if (remainingBudget() >= 0) {
+        insufficientFundsMessage.classList.remove("showMessage");
+       } else {
+        insufficientFundsMessage.classList.add("showMessage");
+       }
+      })*/

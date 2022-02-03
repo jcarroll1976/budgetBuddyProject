@@ -167,6 +167,14 @@
     width: 100%;
     
   }
+.hideMessage {
+  display : none;
+}
+
+.showMessage {
+  color:red;
+  display:block;
+}
       /* Stylization for About creators section*/
   
 #budgetBuddy {
