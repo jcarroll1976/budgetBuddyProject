@@ -259,6 +259,13 @@
   flex-grow: 1;
 }
 
+.fourthPart {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+}
+
 .container {
   display:flex;
   padding-bottom: 10px;
