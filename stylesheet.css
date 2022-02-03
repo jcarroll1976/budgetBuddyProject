@@ -273,7 +273,6 @@
   flex-direction: column;
   flex-grow: 1;
 }
-}
 
 .container {
   display:flex;
@@ -288,6 +287,7 @@
 
 .hiThere {
   justify-content: center;
+}
 }
 
 
