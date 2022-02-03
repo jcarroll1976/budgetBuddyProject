@@ -200,6 +200,17 @@
   display:flex;
 }
 
+.creatorsSection {
+  max-width: 80%;
+  text-align: center;
+}
+.container {
+  display:flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
 @media screen and ( min-width: 780px) {
   tbody {
     text-align: center;
@@ -239,8 +250,6 @@
     width: 45%;
   }
 
- 
-
 .firstHalf {
   display: flex;
   flex-direction: column;
@@ -268,6 +277,7 @@
 
 .container {
   display:flex;
+  flex-direction: row;
   padding-bottom: 10px;
   align-items: center;
 }
@@ -280,7 +290,6 @@
   justify-content: center;
 }
 
-}
 
   
   
