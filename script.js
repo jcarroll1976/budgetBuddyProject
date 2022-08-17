@@ -51,7 +51,7 @@ function myFunction() {
 
   budgetButton.addEventListener("click", (event) => {
       event.preventDefault();
-    monthlyBudget.innerText = "$" + incomeInput.value + ".00";
+    monthlyBudget.innerText = "$" + incomeInput.value;
     budgetHeader.innerText = "Starting Budget:";
     incomeInput.style.display = "none";
     budgetButton.style.display = "none";
